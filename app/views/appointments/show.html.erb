@@ -1,2 +1,15 @@
-<h2><%= @appointment.issue %></h2>
-<h2><%= link_to @appointment.boomer.last_name, boomer_path %></h2>
+<br>
+<br>
+<br>
+<br>
+<p><%= link_to @appointment.client.last_name, @appointment.client %></p>
+<%= @appointment.issue %>:
+<p><%= @appointment.notes %></p>
+
+<%= link_to "Delete", appointment_path(@appointment),
+                method: :delete,
+                data: {confirm: "Are you sure?"},
+                :class => 'btn btn-danger' %>
+
+
+

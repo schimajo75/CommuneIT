@@ -1,6 +1,10 @@
 class AppointmentsController < ApplicationController
     before_action :get_appointment_by_id, only: [:show, :edit, :update, :destroy]
 
+    def index
+        @appointments = Appointment.all 
+    end
+   
     def new
         @appointment = Appointment.new
     end
@@ -14,6 +18,7 @@ class AppointmentsController < ApplicationController
         end
     end
 
+
 def update
     if @appointment.update(appt_params)
         redirect_to @appointment
@@ -24,13 +29,13 @@ end
 
 def destroy
     @appointment.destroy
-    redirect_to boomer_path(@boomer)
+    redirect_to appointments_path
 end
 
 private
 
 def appt_params
-    params.require(:appointment).permit(:issue, :notes, :rating, :resolved, :boomer_id, :consultant_id)
+    params.require(:appointment).permit(:issue, :notes, :rating, :resolved, :client_id, :consultant_id)
 end
 
 def get_appointment_by_id
