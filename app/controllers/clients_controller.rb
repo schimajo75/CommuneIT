@@ -25,6 +25,7 @@ class ClientsController < ApplicationController
         end
     end
 
+
     private
 
 def client_params

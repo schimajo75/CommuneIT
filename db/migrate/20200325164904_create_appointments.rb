@@ -3,7 +3,7 @@ class CreateAppointments < ActiveRecord::Migration[6.0]
     create_table :appointments do |t|
       t.string :issue
       t.text :notes
-      t.string :phone_or_email_reply?
+      t.string :contact
       t.integer :rating
       t.boolean :resolved
       t.belongs_to :client, null: false, foreign_key: true

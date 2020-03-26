@@ -1,7 +1,10 @@
-<br>
-<br>
+
 <br>
 <br>
 <% @consultants.each do |consultant| %>
     <p><%= "#{consultant.name}, grade #{consultant.grade}" %></p>
     <%end%>
+
+    <%= link_to "All Open Inquiries", appointments_path,
+                method: :get,
+                :class => 'btn btn-primary btn-block' %>

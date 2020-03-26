@@ -12,8 +12,8 @@
 <h4>Appointments</h4>
 <ul>
 <% @client.appointments.each do |appt| %>
-    <li> <%= link_to appt.id, appt %> </li>
-    <%= appt.issue %>
+    <li> <%= link_to "Issue ID# #{appt.id}", appt %> </li>
+    Issue: <%= appt.issue %>
     <br>
     <% end %>
 </ul>

@@ -5,6 +5,7 @@
 <p><%= link_to @appointment.client.last_name, @appointment.client %></p>
 <%= @appointment.issue %>:
 <p><%= @appointment.notes %></p>
+<p><%= @appointment.created_at %></p>
 
 <%= link_to "Delete", appointment_path(@appointment),
                 method: :delete,

@@ -3,11 +3,12 @@
 <br>
 <br>
 <ul>
+<h1>Open Inquiries</h1>
 <% @appointments.each do |appt| %>
-    <li><%= link_to "#{appt.client.first_name} #{appt.client.last_name}", appt.client %></li>
-    <p><%= appt.issue %></p>
+     <li><%= link_to "Issue ID# #{appt.id}: ", appt %> </li>
+    <%= appt.issue %>
     <p><%= appt.notes %></p>
-    <p>resolved: <%= appt.resolved %></p>
+    <p><%= link_to "#{appt.client.first_name} #{appt.client.last_name}", appt.client %></p>
     <br>
     <%end%>
     </ul>

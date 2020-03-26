@@ -12,7 +12,7 @@ class AppointmentsController < ApplicationController
     def create
         @appointment = Appointment.new(appt_params)
         if @appointment.save
-            redirect_to @appointment
+            redirect_to @appointment.client
         else
             render :new
         end
