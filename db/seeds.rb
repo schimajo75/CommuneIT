@@ -17,4 +17,4 @@ Client.create(first_name: "Fritz", last_name: "Froderick", email: "fritzy@aol.co
 Client.create(first_name: "Mel", last_name: "Diggler", email: "digdoo@hotmail.com", age: 71)
 Client.create(first_name: "Pearl", last_name: "Baily", email: "pbails@aol.com", age: 68)
 Client.create(first_name: "Cathy", last_name: "Bromide", email: "broom678@yahoo.com", age: 70)
-Client.create(first_name: "Paul", last_name: "Sullivan", email: "sully4eva@aol.com", age: 67)
+Client.create(first_name: "Barbara", last_name: "Schimansky", email: "crazybabs@aol.com", age: 67)

@@ -35,7 +35,7 @@ end
 private
 
 def appt_params
-    params.require(:appointment).permit(:issue, :notes, :rating, :resolved, :client_id, :consultant_id)
+    params.require(:appointment).permit(:issue, :notes, :preferred_consultant, :rating, :resolved, :client_id, :consultant_id)
 end
 
 def get_appointment_by_id

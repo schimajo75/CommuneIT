@@ -18,6 +18,7 @@
 <%= form_for @appointment do |f| %>
 
 <br><%= f.collection_select :client_id, Client.all, :id, :email %><br><br>
+
 <%= f.label :issue %>  
 <p><%= f.text_field :issue %></p>
 
@@ -30,4 +31,3 @@
 
 <%= f.submit "Submit Inquiry"%>
 <%end%>
-

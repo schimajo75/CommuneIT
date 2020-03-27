@@ -1,0 +1,13 @@
+<br>
+<br>
+<br>
+<br>
+<h1><%= @consultant.name %></h1>
+<ul>
+<% @consultant.appointments.each do |appt| %>
+   <li> ID #: <%= appt.id %><br> </li>
+    Issue: <%= appt.issue %><br>
+    Notes: <p><%= appt.notes %></p>
+    <p><%= link_to "#{appt.client.first_name} #{appt.client.last_name}", appt.client %></p>
+    <%end%>
+    </ul>

@@ -6,8 +6,10 @@
 <h1>Open Inquiries</h1>
 <% @appointments.each do |appt| %>
      <li><%= link_to "Issue ID# #{appt.id}: ", appt %> </li>
+     <%= appt.created_at %><br>
     <%= appt.issue %>
     <p><%= appt.notes %></p>
+    <p><%= appt.consultant.name %></p>
     <p><%= link_to "#{appt.client.first_name} #{appt.client.last_name}", appt.client %></p>
     <br>
     <%end%>

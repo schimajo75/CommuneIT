@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 2020_03_25_164904) do
   create_table "appointments", force: :cascade do |t|
     t.string "issue"
     t.text "notes"
-    t.string "contact"
+    t.string "preferred_consultant"
     t.integer "rating"
     t.boolean "resolved"
     t.integer "client_id", null: false
